@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title></title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+    <script type="text/javascript" src="../sources/rightclick.js"></script>
+    <style>
+        #contextMenu {
+            display: none;
+            position: absolute;
+            padding: 10px;
+            background-color: #ddd;
+            border: 1px solid #000;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="contextMenu">
+        <p>Are you human?</p>
+        <form method="post" onsubmit="return docafiValidate();">
+            <div id="message" style="color:#ff0000; "></div>
+            <div id="recaptcha_div"></div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <p>Right-click on every link:</p>
+    <p>Example: <a href="example.pdf">pdf link</a>.</p>
+    <p>Example: <a href="example.txt">txt link</a>.</p>
+</body>
+</html>

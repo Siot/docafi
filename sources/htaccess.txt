@@ -1,0 +1,28 @@
+RewriteEngine On
+
+RewriteRule ^(.+.pdf)$ request.php?file=$1 [NC,L]
+
+
+#RewriteCond   %{REQUEST_URI}        ^(.*)/[-\w\.]*$
+
+#RewriteRule ^(.+.pdf)$ http://www.nacsia.es/testzone/request/request.php?file=/$1 [L]
+#RewriteRule ^(.+.pdf)$ http://www.nacsia.es/testzone/request/request.php?file=%{REQUEST_URI} [R=303,L]
+#RewriteRule ^(.+.pdf)$ http://%{SERVER_NAME}/testzone/request/request.php?file=$0 [R=303,NC,L]
+#RewriteRule ^(.*)$ http://%{SERVER_NAME}/testzone/request/request.php?file=$1 [NC,L]
+#RewriteRule ^(.*)$ http://%{SERVER_NAME}/testzone/request/request.php?file=$1 [NC,L]
+#RewriteRule ^(.+.pdf)$ http://%{SERVER_NAME}/testzone/request/request.php?file=$1 [NC,L]
+
+#RewriteCond %{HTTP_HOST} ^(.*)$
+#RewriteCond %{REQUEST_URI} ^(.*)$
+#RewriteCond %{REQUEST_URI} (.pdf)$
+#RewriteRule ^([^\\\/]*)\.htm $1.php?
+
+
+#/$1/$2/
+
+#RedirectMatch 303 ^(.*)\.pdf$ http://www.nacsia.es/testzone/request/request.php?file=%{HTTP_HOST}$1
+#RedirectMatch 303 ^(.*)\.pdf$ ./request.php?file=$1
+
+# %{HTTP_HOST}
+
+#RedirectMatch 303 ^(.+.pdf)$ http://www.nacsia.es/testzone/request/request.php?file=$1
